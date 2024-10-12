@@ -2,26 +2,294 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 40px;
+}
+.Tags:hover{
+  color: #c3376d;
+  transition: transform 0.2s ease-in;
+  transform: scale(1.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Home Page */
+
+#Home{
+  background: url("./Home/4fd622433a21e15d7c12d7e2390f87ad.jpg");
+  width: 100%;
+  height: 600px;
+}
+
+.home-heading{
+  font-size: 3.5rem;
+  color: #c3376d;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.home-content{
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.home-button{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-button button{
+  height: 40px;
+  width: 150px;
+  background-color: #c3376d;
+  color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.home-button button:hover{
+  transition: transform 0.2s ease-in;
+  transform: scale(1.1);
+  color: black;
+}
+
+/*------------------------------------------------------Creating About Page--------------------------------------- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  background-color: #f0eeee;
+  text-align: center;
+}
+
+/* Section Titles */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-decoration: underline 2px solid #c3376d;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Flexbox Layout for Content */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* About Image */
+.about-img {
+  flex: 1;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  background-color: #ccc;
+  background: url("./About/1718359796071.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 5px solid #c3376d;
+}
+
+.about-img:hover{
+  transition: transform 0.1s ease-in;
+  transform: scale(1.10);
+}
+
+/* About Text */
+.about-text {
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-img {
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto; /* Allow the image to scale proportionally */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* -------------------------------------Creating Contact Page -------------------------------------------------------- */
+.heading{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+
+.container-form {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  max-width: 800px;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 2px solid #f1c40f;
+  background-color: #ffffff;
+}
+
+#form-button {
+  width: 100%;
+  background-color: #f1c40f;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#form-button:hover {
+  background-color: #f39c12;
+}
+
+/* Footer */
+#footer{
+
+  width: 100%;
+  height: 160px;
+  background: url("./Home/4fd622433a21e15d7c12d7e2390f87ad.jpg");
+}
+
+.gmail{
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.gmail a{
+  color: white;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.gmail a:hover{
+  color: #c3376d;
+  transition: transform 0.2s ease-in;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.foot-icon{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.foot-icon svg {
+  margin-right: 10px;
+  font-size: 2.5rem;
+}
+
+.foot-icon svg:hover {
+  color: #555;
+}
+
+.foot-icon a{
+  text-decoration: none;
+}
+
+.foot-icon a:hover{
+  transition: transform 0.2s ease-in;
+  transform: scale(1.2);
+  text-decoration: none;
+  
+}
+
+.foot-para{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: whitesmoke;
 }
